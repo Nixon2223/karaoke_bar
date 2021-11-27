@@ -1,6 +1,9 @@
 import unittest
-
+from src.guest import Guest
 class TestGuest(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.guest = Guest(100)
+    
+    def test_get_wallet(self):
+        self.assertEqual(100, self.guest.wallet)
