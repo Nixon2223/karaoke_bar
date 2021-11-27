@@ -3,3 +3,4 @@ class Room:
         self.number = number
         self.capacity = capacity
         self.current_num_guests = 0
+        self.guests = []
