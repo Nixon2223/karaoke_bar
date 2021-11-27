@@ -12,3 +12,8 @@ class Room:
     def add_guest(self, guest):
         self.guests.append(guest)
 
+    def remove_guest(self, id):
+        for guest in self.guests:
+            if id == guest.id:
+                self.guests.remove(guest)
+
