@@ -1,6 +1,7 @@
 import unittest
 from src.room import Room
 from src.guest import Guest
+from src.song import Song
 
 class TestRoom(unittest.TestCase):
 
@@ -8,6 +9,7 @@ class TestRoom(unittest.TestCase):
         self.room = Room(1, 100)
         self.guest1 = Guest(1, 100, "We Are The Champions")
         self.guest2 = Guest(2, 50, "Song 2")
+        self.song1 = Song("We Are The Champions", "Queen")
         self.room.guests = [self.guest1]
     
     def test_get__number(self):
@@ -26,3 +28,7 @@ class TestRoom(unittest.TestCase):
     def test_remove_guest(self):
         self.room.remove_guest(1)
         self.assertEqual(0, self.room.guest_count())
+    
+    def test_add_song(self):
+        self.room.add_song(self.song1)
+        self.assertEqual(1, len(self.room.songs))

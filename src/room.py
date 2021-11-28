@@ -17,3 +17,5 @@ class Room:
             if id == guest.id:
                 self.guests.remove(guest)
 
+    def add_song(self, song):
+        self.songs.append(song)
