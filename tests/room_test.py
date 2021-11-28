@@ -37,3 +37,5 @@ class TestRoom(unittest.TestCase):
         self.room.capacity = 1
         self.room.add_guest(self.guest2)
         self.assertEqual(1, self.room.guest_count())
+    
+
