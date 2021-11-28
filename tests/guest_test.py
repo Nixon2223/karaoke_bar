@@ -7,3 +7,7 @@ class TestGuest(unittest.TestCase):
     
     def test_get_wallet(self):
         self.assertEqual(100, self.guest.wallet)
+    
+    def test_decrease_wallet(self):
+        self.guest.decrease_wallet(15)
+        self.assertEqual(85, self.guest.wallet)

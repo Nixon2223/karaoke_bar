@@ -3,3 +3,6 @@ class Guest:
         self.id = id
         self.wallet = wallet
         self.favourite_song = favourite_song
+    
+    def decrease_wallet(self, amount):
+        self.wallet -= amount
